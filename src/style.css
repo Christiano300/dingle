@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url("/bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#name,
+#connect,
+#help {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#display-adapter,
+#firmware,
+#version {
+  position: absolute;
+  transform: none;
+}
+
+[contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
+  min-width: 1em;
+}
+
+#name {
+  top: 17vh;
+  font-size: 5.5vh;
+  font-family: "Segoe UI Semibold", sans-serif;
+}
+
+#connect {
+  top: 24.5vh;
+  font-size: 4.2vh;
+}
+
+#win-k {
+  position: absolute;
+  top: 39vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2.5vh;
+  justify-content: center;
+}
+
+#plus {
+  position: relative;
+  margin-top: -1vh;
+  font-size: 7vh;
+}
+
+#win,
+#k {
+  position: relative;
+  width: 3.3vh;
+  height: 3.3vh;
+  padding: 2.7vh;
+  background: white;
+  border-radius: 1.5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#k {
+  color: #2f3032;
+  font-size: 4vh;
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+  line-height: 0.7;
+}
+
+#help {
+  top: 54vh;
+  font-size: 2.5vh;
+  line-height: 1.75;
+  letter-spacing: -0.05vh;
+  word-spacing: 0.2vh;
+  width: 100vw;
+}
+
+#display-adapter {
+  width: 5vh;
+  height: 5vh;
+  left: 4vh;
+  bottom: 7.5vh;
+  background-size: contain;
+}
+
+#firmware {
+  left: 11vh;
+  bottom: 6.75vh;
+  font-size: 1.8vh;
+  text-align: start;
+}
+
+#version {
+  right: 5vh;
+  bottom: 5vh;
+
+  font-size: 1.8vh;
+  text-align: end;
+}
